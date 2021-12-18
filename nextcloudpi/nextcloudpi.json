@@ -1,39 +1,29 @@
-[
-  {
-    "type": 1,
-    "title": "NextCloudPi",
-    "name": "nextcloudpi",
-    "description": "Nextcloudpi is an all in one solution for someone wanting to run Nextcloud on their server.",
-    "logo": "https://raw.githubusercontent.com/paccerdk/yacht-templates/master/nextcloudpi/logo.png",
-    "image": "ownyourbits/nextcloudpi",
-    "categories": [
-      "Backup",
-      "Cloud",
-      "Other",
-      "Productivity",
-      "Tools"
-    ],
-    "platform": "linux",
-    "restart_policy": "unless-stopped",
-    "ports": [
-	  {
-        "NextCloud HTTP": "80:80/tcp",
-        "NextCloud HTTPS": "443:443/tcp",
-        "NextCloudPi web panel": "4443:4443/tcp"
-	  }
-    ],
-      "env": [
-        {
-          "name": "DOMAIN",
-          "label": "DOMAIN",
-          "default": "your trusted domain: the URL or IP that will be used to access."
-        }
-      ],
-    "volumes": [
-      {
-        "container": "/data",
-        "bind": "!data/nextcloudpi"
-      }
-    ]
-  }
-]
+[{
+	"type": 1,
+	"title": "NextCloudPi",
+	"name": "nextcloudpi",
+	"description": "Nextcloudpi is an all in one solution for someone wanting to run Nextcloud on their server.",
+	"logo": "https://raw.githubusercontent.com/paccerdk/yacht-templates/master/nextcloudpi/logo.png",
+	"image": "ownyourbits/nextcloudpi",
+	"categories": [
+		"Backup",
+		"Cloud",
+		"Other",
+		"Productivity",
+		"Tools"
+	],
+	"platform": "linux",
+	"restart_policy": "unless-stopped",
+	"ports": [{
+		"NextCloud HTTP": "80:80/tcp",
+		"NextCloud HTTPS": "443:443/tcp",
+		"NextCloudPi web panel": "4443:4443/tcp"
+	}],
+	"volumes": [{
+		"container": "/data",
+		"bind": "!data/nextcloudpi"
+	}],
+	"command": [
+		"Domain"
+	]
+}]
