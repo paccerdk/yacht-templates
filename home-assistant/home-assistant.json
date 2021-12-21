@@ -1,1 +1,23 @@
-
+[{
+	"type": 1,
+	"title": "Home Assistant",
+	"name": "home-assistant",
+	"description": "Open source home automation that puts local control and privacy first.",
+	"logo": "https://raw.githubusercontent.com/paccerdk/yacht-templates/master/home-assistant/logo.png",
+	"image": "homeassistant/home-assistant",
+	"categories": [
+		"HomeAutomation",
+		"Management",
+		"Other",
+		"Tools"
+	],
+	"platform": "linux",
+	"restart_policy": "unless-stopped",
+	"ports": [{
+		"HTTP": "8123:8123/tcp"
+	}],
+	"volumes": [{
+		"container": "/config",
+		"bind": "!config/nextcloudpi"
+	}]
+}]
